@@ -1,0 +1,1 @@
+char nombre[100];
