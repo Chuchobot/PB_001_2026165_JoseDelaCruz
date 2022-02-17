@@ -2,7 +2,7 @@
 
 
 #include <iostream>
-#include <cstdlib>
+//#include <cstdlib>
 #include <string>
 
 using namespace std;
@@ -11,7 +11,7 @@ int main()
 {
     int opcion;
     bool repetir = true;
-    string nombre ;
+    string nombre="";
     int hora;
 
     do {
@@ -28,7 +28,9 @@ int main()
         
         switch (opcion) {
             case 1:                 
-                cout << "Escriba su nombre:\n"; getline(cin, nombre); 
+                cout << "Escriba su nombre:\n" << endl ; 
+                cin.ignore ();
+                std::getline (std::cin, nombre) ; 
                 cout << "Ingrese la hora deseada:\n"; cin >> hora;
                              
                 break;                
