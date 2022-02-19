@@ -1,5 +1,8 @@
-//Primer avance de programacion basica
-//Programa dirigido a secretarias de consultorio dental
+/* 
+Primer avance de programacion basica
+Programa dirigido a secretarias de consultorio dental
+Programa hecho en visual studio code 
+*/
 
 
 #include <iostream>
