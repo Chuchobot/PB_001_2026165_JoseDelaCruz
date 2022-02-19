@@ -1,8 +1,9 @@
 //Primer avance de programacion basica
+//Programa dirigido a secretarias de consultorio dental
 
 
 #include <iostream>
-//#include <cstdlib>
+#include <cstdlib>
 #include <string>
 
 using namespace std;
@@ -12,7 +13,11 @@ int main()
     int opcion;
     bool repetir = true;
     string nombre="";
-    int hora;
+    char hora [10] ;
+    string trat;
+    string descrip;
+    int pu, ct, puc;
+    int cto ;
 
     do {
         cout << "\n\n    MENU" << endl;
@@ -28,11 +33,31 @@ int main()
         
         switch (opcion) {
             case 1:                 
-                cout << "Escriba su nombre:\n" << endl ; 
+                cout << "Escriba nombre del paciente:" << endl ; 
                 cin.ignore ();
                 std::getline (std::cin, nombre) ; 
-                cout << "Ingrese la hora deseada:\n"; cin >> hora;
-                             
+                
+                cout << "Ingrese la hora de la cita, en formato de 24 horas:\n"; cin >> hora;
+                
+                cout << "Escriba nombre del tratamiento:" << endl ; 
+                cin.ignore ();
+                std::getline (std::cin, trat) ;   
+
+                cout << "Escriba descripcion del tratamiento:" << endl ; 
+                cin.ignore ();
+                std::getline (std::cin, descrip) ;
+
+                cout << "Ingrese costo unitario del tratamiento:" << endl ;
+                cin >> pu ;
+
+                cout << "Ingrese cantidad del tratamiento:" << endl ;
+                cin >> ct ;
+
+                cout << "Ingrese precio unitario de la cita:" << endl ; cin >> puc ;
+                  
+                cto = puc + (pu*ct);
+                cout << "Costo total : " << cto << endl;
+
                 break;                
             case 2:
                 break;
