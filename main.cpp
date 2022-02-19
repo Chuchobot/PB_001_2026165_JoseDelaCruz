@@ -12,12 +12,13 @@ int main()
 {
     int opcion;
     bool repetir = true;
-    string nombre="";
+    string nombre ;
     char hora [10] ;
     string trat;
     string descrip;
     int pu, ct, puc;
     int cto ;
+    int i = 1 ;
 
     do {
         cout << "\n\n    MENU" << endl;
@@ -32,20 +33,23 @@ int main()
         cin >> opcion;
         
         switch (opcion) {
-            case 1:                 
-                cout << "Escriba nombre del paciente:" << endl ; 
+            case 1:   
+            while (i < 4) {  
+                cout << "\nEl No. de cita es: " << i << endl;
+
+                cout << "\nEscriba nombre del paciente:" << endl ; 
                 cin.ignore ();
-                std::getline (std::cin, nombre) ; 
+                getline (cin, nombre) ; 
                 
                 cout << "Ingrese la hora de la cita, en formato de 24 horas:\n"; cin >> hora;
                 
                 cout << "Escriba nombre del tratamiento:" << endl ; 
                 cin.ignore ();
-                std::getline (std::cin, trat) ;   
+                getline (cin, trat) ;   
 
                 cout << "Escriba descripcion del tratamiento:" << endl ; 
                 cin.ignore ();
-                std::getline (std::cin, descrip) ;
+                getline (cin, descrip) ;
 
                 cout << "Ingrese costo unitario del tratamiento:" << endl ;
                 cin >> pu ;
@@ -58,6 +62,9 @@ int main()
                 cto = puc + (pu*ct);
                 cout << "Costo total : " << cto << endl;
 
+                i++ ; 
+
+            }
                 break;                
             case 2:
                 break;
