@@ -8,20 +8,29 @@ Programa hecho en visual studio code
 #include <iostream>
 #include <cstdlib>
 #include <string>
+#include <stdlib.h>
 
 using namespace std;
+    struct cita
+        {
+            string nombre;
+            char hora[10];
+            string trat;
+            string descrip;
+            int pc;
+            int ct;
+            int pu;
+            int puc;
+            int cto ;
+        };
 
 int main()
 {
+    
     int opcion;
     bool repetir = true;
-    string nombre ;
-    char hora [10] ;
-    string trat;
-    string descrip;
-    int pu, ct, puc;
-    int cto ;
-    int i = 1 ;
+    int i ;
+    cita dental[3];
 
     do {
         cout << "\n\n    MENU" << endl;
@@ -37,41 +46,67 @@ int main()
         
         switch (opcion) {
             case 1:   
-            while (i < 4) {  
-                cout << "\nEl No. de cita es: " << i << endl;
+            for (i = 0; i < 3; i++)
+            {
+                cout << "\nEl No. de cita es: " << i+1 << endl;
 
                 cout << "\nEscriba nombre del paciente:" << endl ; 
                 cin.ignore ();
-                getline (cin, nombre) ; 
+                getline (cin,dental[i].nombre) ; 
                 
-                cout << "Ingrese la hora de la cita, en formato de 24 horas:\n"; cin >> hora;
+                cout << "Ingrese la hora de la cita, en formato de 24 horas:\n"; cin >> dental[i].hora;
                 
                 cout << "Escriba nombre del tratamiento:" << endl ; 
                 cin.ignore ();
-                getline (cin, trat) ;   
+                getline (cin,dental[i].trat) ;   
 
                 cout << "Escriba descripcion del tratamiento:" << endl ; 
                 cin.ignore ();
-                getline (cin, descrip) ;
+                getline (cin,dental[i].descrip) ;
 
                 cout << "Ingrese costo unitario del tratamiento:" << endl ;
-                cin >> pu ;
+                cin >> dental[i].pu ;
 
                 cout << "Ingrese cantidad del tratamiento:" << endl ;
-                cin >> ct ;
+                cin >> dental[i].ct ;
 
-                cout << "Ingrese precio unitario de la cita:" << endl ; cin >> puc ;
+                cout << "Ingrese precio unitario de la cita:" << endl ; cin >> dental[i].puc ;
                   
-                cto = puc + (pu*ct);
-                cout << "Costo total : " << cto << endl;
-
-                i++ ; 
-
+                dental[i].cto = dental[i].puc + (dental[i].pu*dental[i].ct);
+                cout << "Costo total : " << dental[i].cto << endl;
             }
+
                 break;                
             case 2:
+            for ( i = 0; i < 3; i++)
+            {
+                
+            }
+            
                 break;
             case 3:
+            for (i = 0; i < 3; i++)
+            {
+                cout << "\nEl No. de cita es: " << i+1 << endl;
+
+                cout << "\nNombre del paciente: " << (dental[i].nombre); 
+                
+                cout << "\nHora: "<< dental[i].hora;
+                
+                cout << "\nTratamiento: " << (dental[i].trat) ;   
+
+                cout << "\nDescripcion del tratamiento: " << (dental[i].descrip) ;
+
+                cout << "\nCosto unitario del tratamiento: " << dental[i].pu ;
+
+                cout << "\nCantidad del tratamiento: " << dental[i].ct ;
+
+                cout << "\nPrecio unitario de la cita: " << dental[i].puc ;
+                  
+                dental[i].cto = dental[i].puc + (dental[i].pu*dental[i].ct);
+                cout << "Costo total : " << dental[i].cto << endl;
+            }
+            
                 break;                
             case 4:
                 break;   
