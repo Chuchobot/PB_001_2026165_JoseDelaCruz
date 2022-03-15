@@ -17,9 +17,8 @@ using namespace std;
             char hora[10];
             string trat;
             string descrip;
-            int pc;
             int ct;
-            int pu;
+            int put;
             int puc;
             int cto ;
         };
@@ -66,14 +65,14 @@ int main()
                 getline (cin,dental[i].descrip) ;
 
                 cout << "Ingrese costo unitario del tratamiento:" << endl ;
-                cin >> dental[i].pu ;
+                cin >> dental[i].put;
 
                 cout << "Ingrese cantidad del tratamiento:" << endl ;
                 cin >> dental[i].ct ;
 
                 cout << "Ingrese precio unitario de la cita:" << endl ; cin >> dental[i].puc ;
                   
-                dental[i].cto = dental[i].puc + (dental[i].pu*dental[i].ct);
+                dental[i].cto = dental[i].puc + (dental[i].put*dental[i].ct);
                 cout << "Costo total : " << dental[i].cto << endl;
             }
 
@@ -127,7 +126,7 @@ int main()
                     for(i=j;i<=j;i++)
                             {
                                 cout << "Ingrese costo unitario del tratamiento:" << endl ;
-                                cin >> dental[i].pu ;
+                                cin >> dental[i].put ;
                             }
                     break;
 
@@ -166,7 +165,7 @@ int main()
                                 getline (cin,dental[i].descrip) ;
 
                                 cout << "Ingrese costo unitario del tratamiento:" << endl ;
-                                cin >> dental[i].pu ;
+                                cin >> dental[i].put ;
 
                                 cout << "Ingrese cantidad del tratamiento:" << endl ;
                                 cin >> dental[i].ct ;
@@ -181,7 +180,7 @@ int main()
                     }
             
                 break;
-                
+
             case 3:
                 break;      
           
@@ -198,13 +197,13 @@ int main()
 
                 cout << "\nDescripcion del tratamiento: " << (dental[i].descrip) ;
 
-                cout << "\nCosto unitario del tratamiento: " << dental[i].pu ;
+                cout << "\nCosto unitario del tratamiento: " << dental[i].put ;
 
                 cout << "\nCantidad del tratamiento: " << dental[i].ct ;
 
                 cout << "\nPrecio unitario de la cita: " << dental[i].puc ;
                   
-                dental[i].cto = dental[i].puc + (dental[i].pu*dental[i].ct);
+                dental[i].cto = dental[i].puc + (dental[i].put*dental[i].ct);
                 cout << "\nCosto total : " << dental[i].cto << endl;
             }
             
@@ -212,8 +211,14 @@ int main()
             case 5:            	              
                 break;            
             case 6:
+                cout<<"Gracias por su visita\n";
+                exit(EXIT_SUCCESS);
                 repetir = false;
                 break;
+            
+            default:
+            cout <<"\nOPCION NO VALIDA";
+            break;
         }        
     } while (repetir);
 	 
