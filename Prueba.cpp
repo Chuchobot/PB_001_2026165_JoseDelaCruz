@@ -1,7 +1,8 @@
 /* 
-Segundo avance de programacion basica
+Prueba para el segundo avance de programacion basica
 Programa dirigido a secretarias de consultorio dental
 Programa hecho en visual studio code 
+Programa usando string
 */
 
 
@@ -13,17 +14,14 @@ Programa hecho en visual studio code
 using namespace std;
     struct cita
         {
-            //string nombre;
-            char nombre [50];
+            string nombre;
             char hora[10];
-            //string trat;
-            char trat [60];
-            //string descrip;
-            char descrip [60];
+            string trat;
+            string descrip;
             int ct;
             int put;
             int puc;
-            int cto;
+            int cto ;
         };
 
 int main()
@@ -54,21 +52,18 @@ int main()
                 cout << "\nEl No. de cita es: " << i+1 << endl;
 
                 cout << "\nEscriba nombre del paciente:" << endl ; 
-                //cin.ignore ();
-                //getline (cin,dental[i].nombre) ;
-                cin >> dental[i].nombre;
+                cin.ignore ();
+                getline (cin,dental[i].nombre) ; 
                 
                 cout << "Ingrese la hora de la cita, en formato de 24 horas:\n"; cin >> dental[i].hora;
                 
                 cout << "Escriba nombre del tratamiento:" << endl ; 
-                //cin.ignore (); 
-                //getline (cin,dental[i].trat) ;
-                cin >> dental[i].trat;
+                cin.ignore (); 
+                getline (cin,dental[i].trat) ;
                 
                 cout << "Escriba descripcion del tratamiento:" << endl ; 
-                //cin.ignore ();
-                //getline (cin,dental[i].descrip) ;
-                cin >> dental[i].descrip;
+                cin.ignore ();
+                getline (cin,dental[i].descrip) ;
 
                 cout << "Ingrese costo unitario del tratamiento:" << endl ;
                 cin >> dental[i].put;
@@ -97,9 +92,8 @@ int main()
                         for(i=j;i<=j;i++)
                             {
                                 cout << "\nEscriba nombre del paciente:" << endl ; 
-                                //cin.ignore ();
-                                //getline (cin,dental[i].nombre) ; 
-                                cin >> dental[i].nombre;
+                                cin.ignore ();
+                                getline (cin,dental[i].nombre) ; 
                 
                             } 
                     break;
@@ -115,9 +109,8 @@ int main()
                     for(i=j;i<=j;i++)
                             {
                                 cout << "Escriba nombre del tratamiento:" << endl ; 
-                                //cin.ignore ();
-                                //getline (cin,dental[i].trat) ;
-                                cin >> dental[i].trat;
+                                cin.ignore ();
+                                getline (cin,dental[i].trat) ;
                             }
                     break;
                     
@@ -125,9 +118,8 @@ int main()
                     for(i=j;i<=j;i++)
                             {
                                 cout << "Escriba descripcion del tratamiento:" << endl ; 
-                                //cin.ignore ();
-                                //getline (cin,dental[i].descrip) ;
-                                cin >> dental[i].descrip;
+                                cin.ignore ();
+                                getline (cin,dental[i].descrip) ;
                             }
                     break;
 
@@ -160,21 +152,18 @@ int main()
                     for(i=j;i<=j;i++)
                             {
                                 cout << "\nEscriba nombre del paciente:" << endl ; 
-                                //cin.ignore ();
-                                //getline (cin,dental[i].nombre) ; 
-                                cin >> dental[i].nombre;
+                                cin.ignore ();
+                                getline (cin,dental[i].nombre) ; 
                                 
                                 cout << "Ingrese la hora de la cita, en formato de 24 horas:\n"; cin >> dental[i].hora;
                                 
                                 cout << "Escriba nombre del tratamiento:" << endl ; 
-                                //cin.ignore ();
-                                //getline (cin,dental[i].trat) ;   
-                                cin >> dental[i].trat;
+                                cin.ignore ();
+                                getline (cin,dental[i].trat) ;   
 
                                 cout << "Escriba descripcion del tratamiento: " << endl ; 
-                                //cin.ignore ();
-                                //getline (cin,dental[i].descrip) ;
-                                cin >> dental[i].descrip;
+                                cin.ignore ();
+                                getline (cin,dental[i].descrip) ;
 
                                 cout << "Ingrese costo unitario del tratamiento:" << endl ;
                                 cin >> dental[i].put ;
