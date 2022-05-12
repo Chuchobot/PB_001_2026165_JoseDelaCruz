@@ -1,1 +1,2 @@
-char nombre[100];
+/cin.ignore ();
+                                //getline (cin,dental[i].nombre) ;
