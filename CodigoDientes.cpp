@@ -1,5 +1,6 @@
 /* 
-Segundo avance de programacion basica
+Jose de Jesus De la Cruz Santiago
+Proyectro final
 Programa dirigido a secretarias de consultorio dental
 Programa hecho en visual studio code 
 */
@@ -84,15 +85,13 @@ int main()
                 break;   
             case 5:  // crear funcion para limpiarPantalla()
                 LimpiarPantalla();
-                //system ("CLEAR");   
-                //repetir = true;        	              
+
                 break;            
             case 6: // crear funcion para SalirSistema()
                 ArchivarCita() ; 
                 SalirSistema() ;
 
                 break;
-            
             default:
                 cout <<"\nOPCION NO VALIDA";
                 break;
