@@ -23,7 +23,7 @@ using namespace std;
 //Definir la estructura
 struct cita {
     string nombre;
-    char hora[10];
+    char hora[5];
     string trat;
     string descrip;
     int ct;
@@ -36,8 +36,9 @@ struct cita {
 // Definir variables globales
 int i;
 int op, j;
-cita dental[3];
+cita dental[100];
 bool repetir = true;
+int n;
 
 // Definir la funcion
 void AgendarCita();
@@ -102,8 +103,10 @@ int main()
 }
 
 void AgendarCita() {
-    //std::cin.ignore (); // afuera del loop
-    for (i = 0; i < 3; i++) {
+    cout <<"Cuantas citas agendaria?: \n";
+    cin >> n ;
+
+    for (i = 0; i < n; i++) {
         cout << "\nEl No. de cita es: " << i+1 << endl;
 
         cout << "\nEscriba nombre del paciente:\n"  ;
@@ -264,7 +267,7 @@ void EliminarCita(){
 }
 
 void ListarCita (){
-    for (i = 0; i < 3; i++)
+    for (i = 0; i < n; i++)
     {
         cout << "\nEl No. de cita es: " << i+1 << endl;
         cout << "\nNombre del paciente: " << (dental[i].nombre); 

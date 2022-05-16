@@ -1,5 +1,4 @@
 NO. CITA	NOMBRE	HORA	TRATAMIENTO	DESCRIPCION	CANTIDAD	PRECIO UNITARIO	SUBTOTAL	TOTAL
 
-1	Jose de Jesus 	13:00	Josede sjdajsd	asjdañ ñose	2	130	260	301	
-2	Juan	12:50	NosexD	ose ajsjda	12	14	168	194	
-3	karla kilo	17:25	el jueves	ero si caben o no	4	180	360	417	
+1	Jose	14:00	Juan xD	o se ajajja	2	1300	2600	3016	
+2	Juan 2	18:00	ajsdj ajsdj ajs	asdjj asdj jas	12	1350	16200	18792	
