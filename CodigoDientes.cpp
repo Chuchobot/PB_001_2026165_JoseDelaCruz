@@ -278,11 +278,11 @@ void ListarCita (){
 }
 
 void LimpiarPantalla(){
-#ifdef WINDOWS
+    //#ifdef WINDOWS
     std::system("cls");
-#else
-    std::system ("clear");
-#endif
+//#else
+    //std::system ("clear");
+//#endif
     repetir = true;  
 }
 
